@@ -1,0 +1,12 @@
+<root>
+    <ebookitem title="Introduction"																file="Intro.qml"/>
+    <ebookitem title="Java"				image="../images/items/java.png"						file="java.qml"/>
+	<ebookitem title="C++"				image="../images/items/cpp.png"							file="cppBook.qml"/>
+	<ebookitem title="HTML"				image="../images/items/html.png"						file="html.qml"/>
+	<ebookitem title="CSS"				image="../images/items/css.png"							file="css.qml"/>
+	<ebookitem title="Java Script"		image="../images/items/js.png"							file="jscript.qml"/>
+	<ebookitem title="PHP"				image="../images/items/php.png"							file="php.qml"/>
+	<ebookitem title="HTML5"			image="../images/items/html5.png"						file="html5.qml"/>
+	<ebookitem title="CSS3"				image="../images/items/css3.png"						file="css3.qml"/>
+	
+</root>
