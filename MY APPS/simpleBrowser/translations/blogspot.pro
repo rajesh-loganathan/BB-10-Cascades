@@ -1,0 +1,1 @@
+include (../blogspot.pro)
