@@ -251,7 +251,7 @@ void ApplicationUI::onFinished()
 	QString response;
 	if (reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt() == 200)
 	{
-		    JsonDataAccess jda;
+		    JsonDataAccessJsonDataAccess jda;
 
 	        QVariantMap map = jda.loadFromBuffer(reply->readAll()).toMap();
 
@@ -259,18 +259,23 @@ void ApplicationUI::onFinished()
 	        qDebug() <<"Full Result is = "<<map["RegistrationResult"].toString();
 
 	        QString m_temperature;
+	        QString result;
 
 
-	        m_temperature = map["RegistrationResult"].toString();
-	        m_temperature=m_temperature.section(':', 0, 0);
+	        result = map["RegistrationResult"].toString();
+	        m_temperature=result.section(':', 0, 0);
+
+	        if(result == "EMAIL ID ALREADY EXISTS")
+	        {
 
 	        	        qDebug() << " New Registration Result is " <<m_temperature;
 	        	        qDebug() <<map["RegistrationResult"].toString();
 
+	        }
 
+	        else if(result != "EMAIL ID ALREADY EXISTS")
+	        {
 
-
-	        	        QString result;
 	        	        QString empid;
 	        	        QString empid_no;
 	        	        QString companyname;
@@ -279,13 +284,11 @@ void ApplicationUI::onFinished()
 	        	        result = map["RegistrationResult"].toString();
 	        	        //empid=m_temperature.section(':', 1, 1);
 	        	        empid_no = map["RegistrationResult"].toString();;
-	        	        empid_no=empid_no.section(':', 1, 1);
+	        	        empid_no=empid_no.section(':', 2, 2);
 	        	        qDebug()<<"Emd ID = "<<empid_no;
+	        	        qDebug()<<"Company ID"<<result.section(':', 4, 4);
 
-	        	        qDebug()<<"Company Name"<<result.section(':', 4, 4);
-	        	        qDebug()<<result.section(':', 1, 1)<<"  =  "<<result.section(':', 2, 2);
-
-
+	        }
 
 	       // QString result;
 	        //result = map["RegistrationResult"].toList();
