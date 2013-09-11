@@ -1,0 +1,10 @@
+{"GetCategoryResult":
+[
+{"CategoryID":"3","CategoryName":"News","CountryID":"1","Result":"OK","ThumnailImage":"http:\/\/192.168.1.251:410\/admin\/UploadImages\/Category\/resizedThumb16115211.png"},
+{"CategoryID":"4","CategoryName":"Daily Paper","CountryID":"1","Result":"OK","ThumnailImage":"http:\/\/192.168.1.251:410\/admin\/UploadImages\/Category\/resizedThumb16121329.png"},
+{"CategoryID":"5","CategoryName":"Thanthi","CountryID":"1","Result":"OK","ThumnailImage":"http:\/\/192.168.1.251:410\/admin\/UploadImages\/Category\/resizedThumb16123423.png"},
+{"CategoryID":"1","CategoryName":"Newspaper","CountryID":"1","Result":"OK","ThumnailImage":"http:\/\/192.168.1.251:410\/admin\/UploadImages\/Category\/resizedThumb18523712.png"},
+{"CategoryID":"2","CategoryName":"Magazine","CountryID":"1","Result":"OK","ThumnailImage":"http:\/\/192.168.1.251:410\/admin\/UploadImages\/Category\/resizedThumb18525324.png"}
+]
+}
+
