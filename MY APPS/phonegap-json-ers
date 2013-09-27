@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Sample</title>
+<script type="application/javascript" src="jquery.min.js"> </script>
+</head>
+<script>
+window.onload = init;
+function init(){
+
+//alert("hai");
+var sampleurl='{"RegistrationResult":"Registered Success:Empid:271:TableName:COMPANY270"}';
+var sampleJSON=JSON.parse(sampleurl);
+
+var countryList=sampleJSON.RegistrationResult;
+//for( var i=0; i<countryList.length;i++){
+document.getElementById("countryName").innerHTML=countryList;
+var text=countryList.split(":");
+//alert(text[0]);
+var text1=text[0].split(" ");
+alert(text[2]);
+if(text1[1]=="Success"){
+
+document.getElementById("countryName").innerHTML=text[2];
+}
+//}*/
+
+}
+
+
+
+</script>
+
+<body>
+<span>Name</span>:<span id="countryName">Dhivya</span>
+
+</body>
+</html>
